@@ -1,16 +1,19 @@
 /*rgb(30, 25, 31), rgb(50,35, 41)*/
 body{
+
     background:#121212;
     background-attachment: fixed;
     padding: 0;
     margin: 0;
 }
 
-
 html{
     height: 100%;
     width: 100%;
     overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: gray transparent;
+    transition: scrollbar-color 0.1s ease-out;
 }
 
 h1{
