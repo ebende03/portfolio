@@ -1,0 +1,161 @@
+:root{
+
+    --dark:#1a1a1b;
+
+    --light:#40444b;
+}
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+html, body{
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    overflow: hidden;
+}
+
+.content{
+    display: grid;
+    background-color: blue;
+    margin: 0%;
+
+    grid-template-columns: 1fr 3.5fr;
+    grid-template-areas:
+        "side main";
+    overflow-y: hidden;
+    height: 100vh;
+}
+
+.content > div{
+    background-color: lightblue;
+
+}
+
+/*side panel content*/
+
+.content > div.side-panel{
+    display: flex;
+    border-style: solid;
+    border-color: #0c0c0e;
+    border-width: 3px;
+
+    align-items: center;
+    justify-content: center;
+    background-color: #1a1a1b;
+    grid-area: side;
+}
+
+.content > .side-panel > .menu{
+    display: flex;
+    width: 100%;
+    min-height: 100%;
+    background-color: 	#1a1a1b;
+
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.content > div.side-panel > .menu > .menu-item{
+    display: flex;
+    gap: 2%;
+    align-items: center;
+    width: 100%;
+    height: 4vh;
+
+    align-items: center;
+    justify-content: center;
+
+    color: rgba(255, 255, 255, 0.726);
+    font-size: 85%;
+    transition: color 0.1s ease-in-out, background-color 0.1s ease-in;
+}
+
+
+.content > div.side-panel > .menu > .menu-item:hover{
+    color: white;
+    background-color: #40444b61;
+    cursor: pointer;
+}
+
+
+
+/*main panel content*/
+.content > div.main-panel{
+    background-color:#2f3136;
+    grid-area: main;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    transition: scrollbar-color 0.1s ease-out;
+    font-family: Arial, Helvetica, sans-serif;
+    scrollbar-width: thin;
+    scrollbar-color: grey transparent;
+    transition: scrollbar-color 0.1s ease-out;
+}
+
+
+.main-panel > .background{
+    
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 80%;
+
+    animation-timeline: scroll();
+    animation-name: move-up;
+    animation-fill-mode: forwards;
+}
+
+.main-panel > .main-block{
+    width: 100%;
+    height: 300%;
+
+
+    animation-timeline: scroll();
+    animation-name: move-up2;
+    animation-fill-mode: none;
+}
+
+.main-block > .title {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 500%;
+    padding: 10%;
+}
+
+.main-block > .body {
+
+    width: 100%;
+    height: 100%;
+
+    background-image: linear-gradient(#2f313653, #2f3136dc 80%);
+    border-style: solid;
+    border-color:#292e378d;
+    backdrop-filter: blur(20px);
+}
+
+
+
+@keyframes move-up{
+    from{
+        
+    }
+    to {
+        transform: translateY(100%);
+    }
+}
+
+@keyframes move-up2{
+    from{
+        transform: translateY(-25%);
+    }
+    to {
+        transform: translateY(-30%);
+    }
+}
