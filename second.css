@@ -22,7 +22,7 @@ html, body{
     background-color: blue;
     margin: 0%;
 
-    grid-template-columns: 1fr 3.5fr;
+    grid-template-columns: 1fr 4fr;
     grid-template-areas:
         "side main";
     overflow-y: hidden;
@@ -88,7 +88,7 @@ html, body{
 
 /*main panel content*/
 .content > div.main-panel{
-    background-color:#2f3136;
+    background-color:rgb(36, 36, 36);
     grid-area: main;
     overflow-x: hidden;
     overflow-y: scroll;
@@ -102,7 +102,7 @@ html, body{
 
 .main-panel > .background{
     
-    background-size: 100% 100%;
+    background-size: 100%;
     background-repeat: no-repeat;
     width: 100%;
     height: 80%;
@@ -125,8 +125,13 @@ html, body{
 .main-block > .title {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 500%;
-    padding: 10%;
+    font-size: 200%;
+    padding-right: 5%;
+    padding-bottom:5%;
+    padding-top: 20%;
+    text-align: right;
+    transform: translateY(0);
+    transition: transform 2s ease-out; 
 }
 
 .main-block > .body {
@@ -138,9 +143,135 @@ html, body{
     border-style: solid;
     border-color:#292e378d;
     backdrop-filter: blur(20px);
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease-in, transform 2s ease; 
+}
+
+.main-block > .gif{
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  opacity: 0.5;
+  top: 10%;
+  left: 10%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: translateY(0);
+  transition: transform 150s linear;
 }
 
 
+
+.aboutme{
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-rows: 2fr 1fr 5fr 5fr;
+    grid-template-areas:
+    "header header header"
+    "subhead subhead subhead"
+    "stuff  stuff  picture"
+    "stuff  stuff  picture";
+
+    border-style: solid;
+    border-width: 1px;
+    border-color: red;
+    z-index: 1;
+}
+
+.aboutme > .aboutme-header{
+    width: 100%;
+    height: 100%;
+
+    grid-area: header;
+
+    border-style: solid;
+    border-width: 1px;
+    border-color: red;
+    z-index: 1;
+}
+.aboutme > .aboutme-subhead{
+    width: 100%;
+    height: 100%;
+
+    grid-area: subhead;
+
+    backdrop-filter:blur(15px);
+    
+
+    border-style: solid;
+    border-width: 1px;
+    border-color: red;
+    z-index: 1;    
+}
+
+.aboutme > .aboutme-items{
+    width: 100%;
+    height: 100%;
+
+    grid-area: stuff;
+    
+
+    display: flex;
+    align-items: center;
+    padding-top: 2%;
+    row-gap: 3%;
+    flex-direction: column;
+
+    border-style: solid;
+    border-width: 1px;
+    border-color: red;
+    z-index: 1;
+}
+
+.aboutme > .aboutme-items > .aboutme-item{
+    width:95%;
+    height: 30%;
+
+    box-shadow: inset 0px 10vh 20vh -10vh rgba(118, 118, 118, 0.306);
+    border-style: solid; 
+    border-width: 1px;
+    border-radius: 2px;
+    border-color: rgb(139, 139, 139);
+    backdrop-filter: blur(8px);
+    z-index: 1;
+
+    transform: translateY(0);
+
+    transition: width 1s ease-in-out, transform 2s ease-out; 
+
+}
+
+.aboutme > .aboutme-items > .aboutme-item:hover{
+    width: 97%;
+}
+
+
+.aboutme > .aboutme-image{
+    width: 100%;
+    height: 100%;
+
+    grid-area: picture;
+
+    border-style: solid;
+    border-width: 1px;
+    border-color: red;
+    z-index: 1;
+}
+
+.aboutme > .background-gear{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translateX(10%);
+    background-image: url(gear_PNG2.png);
+    background-size: cover;
+    opacity: 0.1;
+    z-index: 0;
+}
 
 @keyframes move-up{
     from{

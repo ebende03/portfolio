@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>My second website</title>
+    <link rel="stylesheet" href="second.css">
+</head>
+<body>
+
+    <div class = "content">
+       
+        <div class = "side-panel">
+            <div class = "menu">
+                <div class = "menu-item" id = "home" role = "button" tabindex = "0"><p>Home</p></div>   
+                <div class = "menu-item" id = "aboutme" role = "button" tabindex = "0"><p>About Me</p></div>
+                <div class = "menu-item" id = "folderProjects" role = "button" tabindex = "0"><p>Projects</p></div>
+                <div class = "menu-item" id = "project" data-project = "project-1" role = "button" tabindex = "0"><p>JAVA Conway’s ’Game of Life’</p></div>
+                <div class = "menu-item" id = "project" data-project = "project-2" role = "button" tabindex = "0"><p>Project 2.</p></div> 
+                <div class = "menu-item" id = "project" data-project = "project-2" role = "button" tabindex = "0"><p>Project 2.</p></div> 
+                <div class = "menu-item" id = "project" data-project = "project-2" role = "button" tabindex = "0"><p>Project 2.</p></div> 
+                <div class = "menu-item" id = "project" data-project = "project-2" role = "button" tabindex = "0"><p>Project 2.</p></div> 
+                <div class = "menu-item" id = "project" data-project = "project-2" role = "button" tabindex = "0"><p>Project 2.</p></div> 
+                <div class = "menu-item" id = "project" data-project = "project-2" role = "button" tabindex = "0"><p>Project 2.</p></div> 
+                <div class = "menu-item" id = "project" data-project = "project-2" role = "button" tabindex = "0"><p>Project 2.</p></div> 
+                <div class = "menu-item" id = "resume" role = "button" tabindex = "0"><p>Resume</p></div>
+                <div class = "menu-item" id = "home" role = "button" tabindex = "0"><p>Contact Me</p></div>
+                <div class = "menu-item" id = "folderOther" role = "button" tabindex = "0"><p>Other Links</p></div>
+                <div class = "menu-item" id = "other" data-project = "project-1" role = "button" tabindex = "0"><p>Email</p></div>
+                <div class = "menu-item" id = "other" data-project = "project-2" role = "button" tabindex = "0"><p>Gitlab</p></div> 
+                <div class = "menu-item" id = "other" data-project = "project-2" role = "button" tabindex = "0"><p>Github</p></div> 
+                <div class = "menu-item" id = "other" data-project = "project-2" role = "button" tabindex = "0"><p>Linkedin</p></div> 
+
+
+ 
+            </div>
+        </div>
+        <div class = "main-panel" id = "main-panel" style = "overflow: hidden">
+                <iframe src = "C:\Users\ethan\SecondSite\Portfolio\Home.html" style = "width: 100%; height: 100%; border: none; "></iframe>
+        </div>
+    </div>
+    <script>
+
+        const items = document.querySelectorAll("#project");
+        const mainPanel = document.getElementById("main-panel");
+        const homeButton = document.getElementById("home");
+        const resumeButton = document.getElementById("resume");
+        const aboutMeButton = document.getElementById("aboutme");
+        const folderProjects = document.getElementById("folderProjects");
+
+
+        const folderOther = document.getElementById("folderOther");
+        const otherLinks = document.querySelectorAll("#other");
+
+        const mainContent = {
+            "project-1":`
+            <div class = "background" style = "background-image: url(images/project/conways.png);"></div>
+            <div class = "main-block">
+                <div class = "title" id = "titleId"> <b>Java Conway's Game of Life</b> </div>
+                <div class = "body" id = "bodyId"></div>
+                <div class = "gif" id = "conwayGif" style = "background-image: url(images/project/conways.gif);"></div>
+            </div>
+            `,
+            "resume":`
+                <iframe src = "Resume.pdf" style = "width: 100%; height: 100%; border: none; "></iframe>
+            `,
+            "aboutme":`
+            <div class = "aboutme">
+                <div class = "background-gear"></div> 
+                <div class = "aboutme-header">I'm Ethan, an undergrad student in Computer Science at University of Guelph</div>
+                <div class = "aboutme-subhead">Full Stack Developer Open to Work</div>
+                <div class = "aboutme-items">
+                
+                    <div class = "aboutme-item" id = "item1"></div>
+                    <div class = "aboutme-item" id = "item2"></div>
+                    <div class = "aboutme-item" id = "item3"></div>
+
+                </div>
+                <div class = "aboutme-image"></div>  
+
+            </div>
+            `
+        }
+
+
+
+        const scrollable = {
+            "project-1":`
+                scroll
+            `
+        }
+
+        homeButton.addEventListener("click", () => {
+            window.location.reload();
+        });
+        resumeButton.addEventListener("click", () => {
+            mainPanel.innerHTML = mainContent["resume"];
+        });
+        aboutMeButton.addEventListener("click", () => {
+            mainPanel.innerHTML = mainContent["aboutme"];
+                    console.log("asdfasdf");
+                    const itemOne = document.getElementById("item1");
+                    const itemTwo = document.getElementById("item2");
+                    const itemThree = document.getElementById("item3");
+                    itemOne.style.transform = 'translateY(4%)';
+                    itemTwo.style.transform = 'translateY(8%)';
+                    itemThree.style.transform = 'translateY(12%)';
+                
+                    void itemOne.offsetWidth;
+                    void itemTwo.offsetWidth;
+                    void itemThree.offsetWidth;
+
+                    itemOne.style.transform = 'translateY(0%)';
+                    itemTwo.style.transform = 'translateY(0%)';
+                    itemThree.style.transform = 'translateY(0%)';
+        });
+        
+        items.forEach(item => {
+            item.style.display = 'none'; 
+            item.addEventListener("click", () => {
+                const projectName = item.getAttribute("data-project");
+                
+                mainPanel.innerHTML = mainContent[projectName];
+                mainPanel.style.overflowY = scrollable[projectName];
+                if(projectName == "project-1"){
+                    const body = document.getElementById("bodyId");
+                    const title = document.getElementById("titleId");
+                    const gif = document.getElementById("conwayGif");
+                    body.style.opacity = '0';
+                    body.style.transform = 'translateY(4%)';
+                    title.style.transform = 'translateY(4%)';
+                    gif.style.transform = 'translateX(-200%) translateY(-200%)';
+                
+                    void body.offsetWidth;
+                    void title.offsetWidth;
+                    void gif.offsetWidth;
+
+                    body.style.opacity = '1';
+                    body.style.transform = 'translateY(0%)';
+                    title.style.transform = 'translateY(0%)';
+                    gif.style.transform = 'translateX(1700%) translateY(1700%)';
+                }
+            });
+        });
+
+        otherLinks.forEach(item =>{
+            item.style.display = 'none';
+        });
+        
+
+        x = 0.1;
+
+
+        const arrowImg = document.createElement('img');
+        arrowImg.src = 'image (1).png';
+        arrowImg.style.width = '15px';
+        arrowImg.style.height = '15px';
+        arrowImg.style.marginRight = "-10%";
+        arrowImg.style.position = 'absolute';
+        arrowImg.style.opacity = "80%";
+        arrowImg.style.transition = "rotate 0.5s cubic-bezier(0.22, 1, 0.36, 1)"
+        arrowImg.style.rotate = "-90deg";
+        
+        folderProjects.appendChild(arrowImg);
+
+        const arrowImg2 = arrowImg.cloneNode(true);
+        folderOther.appendChild(arrowImg2);
+
+        
+
+        folderProjects.addEventListener("click", () => {
+
+
+
+            items.forEach(item => {
+
+                const existingLine = item.querySelector('.line-div');
+
+                console.log("asdf");
+                    if (item.style.display === 'none') {
+
+                        item.style.display = ''; 
+
+                        const lineDiv = document.createElement('div');
+                        lineDiv.className = "line-div";
+                        lineDiv.style.width = '2px'; 
+                        lineDiv.style.height = '4%'; 
+                        lineDiv.style.backgroundColor = 'rgba(255, 255, 255, 0.726)'; 
+                        lineDiv.style.marginRight = '17%';
+                        lineDiv.style.position = 'absolute';
+                        lineDiv.style.opacity = '0';
+                        item.style.opacity = '0';
+                        lineDiv.style.transition = 'opacity '+x+'s ease-in';
+                        item.style.transition = 'opacity '+x/4+'s ease-in';
+
+                        item.appendChild(lineDiv);
+
+                        void lineDiv.offsetWidth;
+                        void item.offsetWidth;
+
+                        lineDiv.style.opacity = '1';
+                        item.style.opacity = '1';
+                        x+=0.2;
+                        arrowImg.style.rotate = "0deg";
+
+                    } else {
+                        item.style.display = 'none';
+                        x=0.1;
+                        if(existingLine) existingLine.remove();
+                        arrowImg.style.rotate = "-90deg";
+                    }
+                
+            
+            });
+        });
+
+        x = 0.1;
+
+        folderOther.addEventListener("click", () => {
+
+
+
+            otherLinks.forEach(item => {
+
+                const existingLine = item.querySelector('.line-div');
+
+                console.log("asdf");
+                    if (item.style.display === 'none') {
+
+                        item.style.display = ''; 
+
+                        const lineDiv = document.createElement('div');
+                        lineDiv.className = "line-div";
+                        lineDiv.style.width = '2px'; 
+                        lineDiv.style.height = '4%'; 
+                        lineDiv.style.backgroundColor = 'rgba(255, 255, 255, 0.726)'; 
+                        lineDiv.style.marginRight = '17%';
+                        lineDiv.style.position = 'absolute';
+                        lineDiv.style.opacity = '0';
+                        item.style.opacity = '0';
+                        lineDiv.style.transition = 'opacity '+x+'s ease-in';
+                        item.style.transition = 'opacity '+x/4+'s ease-in';
+
+
+                        item.appendChild(lineDiv);
+
+                        void lineDiv.offsetWidth;
+                        void item.offsetWidth;
+
+                        lineDiv.style.opacity = '1';
+                        item.style.opacity = '1';
+                        x+=0.2;
+                        arrowImg2.style.rotate = "0deg";
+
+                    } else {
+                        item.style.display = 'none';
+                        x=0;
+                        if(existingLine) existingLine.remove();
+                        arrowImg2.style.rotate = "-90deg";
+                    }
+                
+            
+            });
+        });
+
+
+    </script>
+</body>
+</html>
