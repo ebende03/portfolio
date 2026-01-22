@@ -2,7 +2,8 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>My second website</title>
+    <title>Ethan Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="webpage-image.png">
     <link rel="stylesheet" href="second.css">
 </head>
 <body>
@@ -12,23 +13,17 @@
         <div class = "side-panel">
             <div class = "menu">
                 <div class = "menu-item" id = "home" role = "button" tabindex = "0"><p>Home</p></div>   
-                <div class = "menu-item" id = "aboutme" role = "button" tabindex = "0"><p>About Me</p></div>
-                <div class = "menu-item" id = "folderProjects" role = "button" tabindex = "0"><p>Projects</p></div>
+                <div class = "menu-item" id = "aboutme" role = "button" tabindex = "1"><p>About Me</p></div>
+                <div class = "menu-item" id = "folderProjects" role = "button" tabindex = "2"><p>Projects</p></div>
                 <div class = "menu-item" id = "project" data-project = "project-1" role = "button" tabindex = "0"><p>JAVA Conway’s ’Game of Life’</p></div>
-                <div class = "menu-item" id = "project" data-project = "project-2" role = "button" tabindex = "0"><p>Project 2.</p></div> 
-                <div class = "menu-item" id = "project" data-project = "project-2" role = "button" tabindex = "0"><p>Project 2.</p></div> 
-                <div class = "menu-item" id = "project" data-project = "project-2" role = "button" tabindex = "0"><p>Project 2.</p></div> 
-                <div class = "menu-item" id = "project" data-project = "project-2" role = "button" tabindex = "0"><p>Project 2.</p></div> 
-                <div class = "menu-item" id = "project" data-project = "project-2" role = "button" tabindex = "0"><p>Project 2.</p></div> 
-                <div class = "menu-item" id = "project" data-project = "project-2" role = "button" tabindex = "0"><p>Project 2.</p></div> 
-                <div class = "menu-item" id = "project" data-project = "project-2" role = "button" tabindex = "0"><p>Project 2.</p></div> 
-                <div class = "menu-item" id = "resume" role = "button" tabindex = "0"><p>Resume</p></div>
-                <div class = "menu-item" id = "home" role = "button" tabindex = "0"><p>Contact Me</p></div>
-                <div class = "menu-item" id = "folderOther" role = "button" tabindex = "0"><p>Other Links</p></div>
-                <div class = "menu-item" id = "other" data-project = "project-1" role = "button" tabindex = "0"><p>Email</p></div>
-                <div class = "menu-item" id = "other" data-project = "project-2" role = "button" tabindex = "0"><p>Gitlab</p></div> 
-                <div class = "menu-item" id = "other" data-project = "project-2" role = "button" tabindex = "0"><p>Github</p></div> 
-                <div class = "menu-item" id = "other" data-project = "project-2" role = "button" tabindex = "0"><p>Linkedin</p></div> 
+                <div class = "menu-item" id = "project" data-project = "project-2" role = "button" tabindex = "0"><p>EASy68k Assembly Pacman</p></div> 
+                <div class = "menu-item" id = "resume" role = "button" tabindex = "3"><p>Resume</p></div>
+<!--                <div class = "menu-item" id = "home" role = "button" tabindex = "4"><p>Contact Me</p></div> -->
+                <div class = "menu-item" id = "folderOther" role = "button" tabindex = "5"><p>Other Links</p></div>
+                <div class = "menu-item" id = "other" data-project = "project-1" role = "button" tabindex = "6"><a href = "mailto:ethan.bender.2006@gmail.com">Email</a></div>
+                <div class = "menu-item" id = "other" data-project = "project-2" role = "button" tabindex = "7"><a href = "https://gitlab.socs.uoguelph.ca/ebende03">Gitlab</a></div> 
+                <div class = "menu-item" id = "other" data-project = "project-2" role = "button" tabindex = "8"><a href = "https://github.com/ebende03">Github</a></div> 
+                <div class = "menu-item" id = "other" data-project = "project-2" role = "button" tabindex = "9"><a href = "https://www.linkedin.com/in/ethan-bender-9975a7346/">Linkedin</a></div> 
 
 
  
@@ -56,8 +51,68 @@
             <div class = "background" style = "background-image: url(images/project/conways.png);"></div>
             <div class = "main-block">
                 <div class = "title" id = "titleId"> <b>Java Conway's Game of Life</b> </div>
-                <div class = "body" id = "bodyId"></div>
+                <div class = "body" id = "bodyId">
+                <h1><b>What is this?</b></h1><br><hr><br><br>
+<p>
+    <code style = "background-color: rgb(32,32,32);">Conway’s Game of Life</code> is a graphical implementation of John Conway’s cellular automaton that I built as my Grade 12 final computer science project using Java and a custom GUI.
+    It was my first complete simulation project and one I’m particularly proud of, as it combines algorithms, visualization, and user interaction into a polished program.
+</p>
+<br><br><br>
+
+<h1><b>Technical Focus</b></h1>
+<br><hr><br><br>
+<p>
+    The program visualizes how complex and often surprising behavior can emerge from a small set of simple rules governing cell survival, death, and reproduction.
+    Building this project strengthened my understanding of grid-based data structures, state transitions, and event-driven GUI programming, while also reinforcing how powerful simple rules can be when applied at scale.
+</p>
+<br><br><br>
+
+<h1><b>Distribution</b></h1>
+<br><hr><br><br>
+<p>
+    An executable release is coming soon, which will allow the program to be run easily without requiring a Java development environment.
+</p>              
+            </div>
                 <div class = "gif" id = "conwayGif" style = "background-image: url(images/project/conways.gif);"></div>
+            </div>
+            `,
+            "project-2":`
+            <div class = "background" style = "background-image: url(images/project/pacman.png);"></div>
+            <div class = "main-block">
+                <div class = "title" id = "titleId"> <b>EASy68k Assembly Pacman</b> </div>
+                <div class = "body" id = "bodyId">
+                    <a href="https://github.com/ebende03/EASy68k-Assembly-Pacman" class="button"><img src = "githubButton.png" style = "margin-top: 1%; width: 30px; float: right;"></a>
+                    <h1><b>What is this?</b></h1><br><hr><br><br>
+                    <p>The <code style = "background-color: rgb(32,32,32);">EASy68k Assembly Pacman</code> replica project is a continuation of what I learnt in the Microcomputers course CIS*2030 at the University of Guelph.
+                        The project serves as an exploration of low-level graphics, input handling, and game logic on a simulated 68k system.</p>
+                    <br><br><br>
+                    <h1><b>Bitmap Conversion Tool</b></h1>
+                    <br><hr><br><br>
+                    <p>To handle graphics, I wrote a short Python program that converts RGB pixel values from an image into the BBGGRR hexadecimal format expected by EASy68k. The resulting bitmap data is embedded directly into the assembly source file and accounts for the majority of the codebase (approximately 32,000 lines).
+                    This approach allowed me to focus on low-level rendering without relying on external assets at runtime.
+                    </p>
+                    <br><br><br>
+                    <h1><b>How to Run</b></h1>
+                    <br><hr><br><br>
+                    <p>To run this project visit the repository on my GitHub, the button is at the top of this page. 
+                        This project is only 1 file so it is easy to set up and run, just ensure that you have
+                        EASy68k downloaded and set up. Once the file is open, press either one of the assemble source buttons:</p><br><br>
+                    <img src = "assembleButtonScreenshot.png" style: "width: 100%"><br><br>
+                    <p>After the program is assembled, press the run button on the new window that has just opened.</p><br><br>
+                    <img src = "runButtonScreenshot.png"><br><br>
+                    <h1><b>Controls</b></h1><br><hr><br><br>
+                    <p>The controls are w (up), a (left), s (down), d (right) for changing the direction. Once all the pellets are eaten the ghost will become eatable and thats when
+                        the game can be won. This is not the traditional Pacman gameplay loop and acts more like
+                        a mini-game, however I plan to build upon this and implement a neverending gamemode.</p>
+                    <br><br><br>
+                    <h1><b>Credits</b></h1><br><hr><br><br>
+                    <p><code style = "background-color: rgb(32,32,32);">EASy68k Assembly Pacman</code> was written entirely by Ethan Bender. Large amounts of inspiration go to
+                        the original Pacman by Namco (Obviously), and also my Microcomputers professor Gary Grewal who
+                        got me interested in all this cool stuff.</p><br><br><br>
+                    <h1><b>License</b></h1><br><hr><br><br>
+                    <p><code style = "background-color: rgb(32,32,32);">ASy68k Assembly Pacman</code> is free software thats released under the
+                        MIT License. See more under the <code style = "background-color: rgb(32,32,32);">LICENSE</code> file in the GitHub repository.</p>
+                </div>
             </div>
             `,
             "resume":`
@@ -66,16 +121,61 @@
             "aboutme":`
             <div class = "aboutme">
                 <div class = "background-gear"></div> 
-                <div class = "aboutme-header">I'm Ethan, an undergrad student in Computer Science at University of Guelph</div>
-                <div class = "aboutme-subhead">Full Stack Developer Open to Work</div>
+                <div class = "aboutme-header" id = "aboutme-head"><b>I'm Ethan, an undergrad student in Computer Science at University of Guelph</b></div>
+                <div class = "aboutme-subhead">
+                    <div class = "aboutme-subhead-text"><b>Open To Work - Searching May-Dec 2026 Co-op</b></div>
+                    <div class = "aboutme-subhead-buttons">
+
+                        <div class = "buttonVolume">
+                            <img src = "volume.png" style = "width: 70%; height: 70%; display: block; margin: auto; margin-top: 18%;">                            
+                        </div>   
+
+                        <div class = "buttonPausePlay">
+                            <img src = "pause.png" style = "width: 100%; height: 100%; display: block;">
+                        </div>
+
+ 
+                        <div class = "buttonSkip">
+                            <img src = "skip.png" style = "width: 70%; height: 70%; display: block; margin: auto; margin-top: 18%;">
+                        </div>
+
+                    </div>
+                </div>
                 <div class = "aboutme-items">
                 
-                    <div class = "aboutme-item" id = "item1"></div>
-                    <div class = "aboutme-item" id = "item2"></div>
-                    <div class = "aboutme-item" id = "item3"></div>
+                    <div class = "aboutme-item" id = "item1">
+                        Who am I?<br><hr>
+                        <p>
+                        Hi! My name is Ethan (if you haven't seen it yet), and I am very passionate about computers
+                        and learning new things. In my academics, I maintain a high 89% GPA, and love trying to learn
+                        things that seem foreign to me. Aside from school, I love to make music and play the drums and guitar
+                        which I have been doing for most of my life. I also like to make art. 
+                        </p>
+                        </div>
+                    <div class = "aboutme-item" id = "item2">
+                        What I Build<br><hr>
+                        <p>
+                        I like to design and build front end, I find the end results very satisfying to see it all come together.
+                        I also have a strong love for low-level development and building algorithms with constraints that make me
+                        think harder to preserve as much memory and space I can. I thrive in taking on challenges that are on the
+                        edge of my comfort zone, and I believe that can be seen a lot in the projects I have made thus far. 
+                        </p>
+                        </div>
+                    <div class = "aboutme-item" id = "item3">
+                        What I Use<br><hr>
+                        <p>
+                        The technologies I use depend upon what I am working on and wanting to optimize. Currently, I've used VS code, 
+                        EASy68k, Apache NetBeans, and Linux with git and I also have experience with Docker and dev containers. As for 
+                        programming languages, I use a variety from C to HTML/CSS/Javascript to Assembly to Python. What I use is constantly
+                        changing as I love learning new programming languages and tools that I can add under my belt that will help
+                        me evolve as a passionate up and coming developer. 
+                        </p>
+                        </div>
 
                 </div>
-                <div class = "aboutme-image"></div>  
+                <div class = "aboutme-image">
+                    <div class = "image-class" id = "image1"></div>
+                </div>  
 
             </div>
             `
@@ -85,6 +185,9 @@
 
         const scrollable = {
             "project-1":`
+                scroll
+            `,
+            "project-2":`
                 scroll
             `
         }
@@ -97,21 +200,32 @@
         });
         aboutMeButton.addEventListener("click", () => {
             mainPanel.innerHTML = mainContent["aboutme"];
-                    console.log("asdfasdf");
                     const itemOne = document.getElementById("item1");
                     const itemTwo = document.getElementById("item2");
                     const itemThree = document.getElementById("item3");
+                    const head = document.getElementById("aboutme-head");
+                    const imageOne = document.getElementById("image1")
                     itemOne.style.transform = 'translateY(4%)';
                     itemTwo.style.transform = 'translateY(8%)';
                     itemThree.style.transform = 'translateY(12%)';
+                    head.style.transform = 'translateY(20%)';
+                    imageOne.style.transform = 'translateY(5%)';
+                    imageOne.style.rotate = '-2deg';
+                    head.style.opacity = '0';
                 
                     void itemOne.offsetWidth;
                     void itemTwo.offsetWidth;
                     void itemThree.offsetWidth;
+                    void head.offsetWidth;
+                    void imageOne.offsetWidth;
 
                     itemOne.style.transform = 'translateY(0%)';
                     itemTwo.style.transform = 'translateY(0%)';
                     itemThree.style.transform = 'translateY(0%)';
+                    head.style.transform = 'translateY(0%)';
+                    imageOne.style.transform = 'translateY(0%)';
+                    imageOne.style.rotate = '0deg';
+                    head.style.opacity = '0.923';                    
         });
         
         items.forEach(item => {
@@ -138,6 +252,17 @@
                     body.style.transform = 'translateY(0%)';
                     title.style.transform = 'translateY(0%)';
                     gif.style.transform = 'translateX(1700%) translateY(1700%)';
+                }
+                if(projectName == "project-2"){
+                    const body = document.getElementById("bodyId");
+                    const title = document.getElementById("titleId");
+                    body.style.transform = 'translateY(4%)';
+                    title.style.transform = 'translateY(4%)';
+
+                    void body.offsetWidth;
+                    void title.offsetWidth;
+                    body.style.transform = 'translateY(0%)';
+                    title.style.transform = 'translateY(0%)';
                 }
             });
         });
@@ -266,4 +391,3 @@
     </script>
 </body>
 </html>
-
