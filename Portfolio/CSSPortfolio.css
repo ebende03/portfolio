@@ -11,9 +11,11 @@ html{
     height: 100%;
     width: 100%;
     overflow-x: hidden;
+    overflow-y: hidden;
     scrollbar-width: thin;
     scrollbar-color: gray transparent;
     transition: scrollbar-color 0.1s ease-out;
+
 }
 
 h1{
@@ -132,6 +134,17 @@ h1.loaded2{
     font-size: 14px;
 }
 
+.link > a{
+    color: white;
+    text-decoration: none;
+    
+}
+
+.link > a:hover{
+    color: rgb(18, 3, 9);
+    transition: color 0.5s ease;
+    
+}
 
 .links-container .link:hover{
     opacity: 65%;
